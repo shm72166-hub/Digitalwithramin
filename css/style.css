@@ -566,3 +566,66 @@ footer p {
     }
 
 }
+/* =========================================
+   PROFESSIONAL HAMBURGER MENU
+========================================= */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        width: 100%;
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 769px) {
+
+    .nav {
+        display: flex !important;
+    }
+
+}
